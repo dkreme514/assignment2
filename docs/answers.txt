@@ -1,0 +1,142 @@
+The date I went through the git lab tutorials was 10/26/23-10/27/23
+Github account was created roughly 2019
+
+1. donnie@mbp assignment2 % git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 295 bytes | 295.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/dkreme514/assignment2.git
+   f4975e5..145c416  master -> master
+donnie@mbp assignment2 % git commit -m"Created README"
+[master 610befe] Created README
+ 1 file changed, 1 insertion(+)
+ create mode 160000 assignment2
+donnie@mbp assignment2 % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    assignment2
+
+no changes added to commit (use "git add" and/or "git commit -a")
+donnie@mbp assignment2 % mkdir docs
+donnie@mbp assignment2 % cd docs
+donnie@mbp docs % pico docs/status.txt
+donnie@mbp docs % pico docs/status.txt
+donnie@mbp docs % pico docs.txt
+donnie@mbp docs % git commit -m"Create a folder called docs"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    ../assignment2
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	./
+
+no changes added to commit (use "git add" and/or "git commit -a")
+donnie@mbp docs % cd ..   
+donnie@mbp assignment2 % ls                            
+Bicycle.cpp		PoweredVehicle.cpp	Vehicle.h
+Bicycle.h		PoweredVehicle.h	docs
+Car.cpp			README.md		main.cpp
+Car.h			Vehicle.cpp
+donnie@mbp assignment2 % git commit -m"Create a folder called docs..."
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    assignment2
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	docs/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+donnie@mbp assignment2 % git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 267 bytes | 267.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/dkreme514/assignment2.git
+   145c416..610befe  master -> master
+donnie@mbp assignment2 % git commit -m"Create a folder called docs..."
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    assignment2
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	docs/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+donnie@mbp assignment2 % git add docs
+donnie@mbp assignment2 % git commit -m"Create a folder called docs..."
+[master fc56def] Create a folder called docs...
+ 1 file changed, 14 insertions(+)
+ create mode 100644 docs/docs.txt
+donnie@mbp assignment2 %
+##################################################################
+2. I have done 4 commits. As for everyone, git rev-list --count --all showed 10.
+As for my commits, I used git log origin.
+##################################################################
+3. commit 610befebfe2564ccf343285620f6ceb945bfb349
+Author: dkreme514 <dkreme514@icloud.com>
+Date:   Sun Oct 29 18:58:41 2023 -0500
+
+    Created README
+
+The command i used was git log origin.
+#####################################################################
+4. Branches are used so as too keep things in scope, as far as
+	commits, and edits go. It also helps to keep it organized.
+####################################################################
+5. git log displays commits, alongwith everyone elses commits who 
+	have been working on the project. It allows for filtering
+	and searching. Git status lets you see what youve done in
+	the current directory prior to committing it.
+#####################################################################
+6.I used git log -- Vehicle.h and git log --follow Vehicle.h 
+	in order to track every commit for Vehicle.h.
+#####################################################################
+7. git log --grep file
+#####################################################################
+8. Inheritance is mechanism that allows one class to inherit another
+	classes properties, like methods. A parent class can be an animal
+	and a derived class can be dog. Polymorphism is the ability of 
+	a program to use methods/variables for different things, depending
+	on how they are used. Encapsulation can be thought of as the 
+	bundling of data. Containers is a good example of these. 
+########################################################################
+9. The difference in the two workflows is lieutenants merge the developers
+branched into their master branch and the dictator merges the lieutenants 
+into their own branch which is then turn into the blessed repository. Integration
+Manager workflows give the developers to see the public
+repository then the integration manager pulls from the public repositories and 
+does conflict resolution before submitting to the blessed repository. It is
+considered more of a centralized integration.
+##########################################################################
+10. Using the Dictaters and Lieutenants workflow in a biiger scaled project
+would allow one person to delegate a lot of the work and make it to where
+they could collect a lot of work before integrating it.
